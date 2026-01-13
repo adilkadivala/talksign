@@ -1,0 +1,50 @@
+import Link from "next/link";
+
+export const Footer = () => {
+  const date = new Date();
+  const newDate = date.getFullYear();
+
+  const socials = [
+    {
+      name: "join waitlist",
+      url: "/",
+    },
+    {
+      name: "careers",
+      url: "/",
+    },
+    {
+      name: "contact",
+      url: "/",
+    },
+  ];
+
+  return (
+    <footer className="w-full bg-accent border border-primary/10">
+      <div className="w-full max-w-5xl mx-auto">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-primary text-sm">
+            © {newDate} TalkSign. All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            {socials.map((social) => (
+              <Link
+                key={social.name}
+                href={social.url}
+                className="text-primary/65 hover:text-primary transition-colors text-sm"
+              >
+                {social.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* Bottom */}
+      <div className="hidden p-0 h-full lg:flex items-stretch justify-center w-full">
+        <span className="text-[200px] font-stretch-extra-expanded font-extrabold tracking-normal bg-linear-to-t from-accent to-accent-foreground/20 bg-clip-text text-transparent font-serif">
+          TalkSign
+        </span>
+      </div>
+    </footer>
+  );
+};
