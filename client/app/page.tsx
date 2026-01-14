@@ -19,10 +19,8 @@ export default function LandingPage() {
           <div className="w-px h-full absolute right-4 sm:right-6 md:right-8 lg:right-0 top-0 bg-primary/10 shadow-primary/25 z-0"></div>
 
           <div className="self-stretch pt-2.25 overflow-hidden flex flex-col justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-16.5 relative z-10">
-            {/* Navigation */}
             <Navbar />
 
-            {/* Hero Section */}
             <div className="pt-16 md:pt-24 lg:pt-20 flex flex-col justify-start items-center px-2 md:px-0 w-full">
               <Hero />
               <Features />

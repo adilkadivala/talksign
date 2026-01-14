@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc -b",
+    "start": "bun run ./dist/index.js",
+    "dev": "bun run build && bun run start",
+    "db:generate": "bunx prisma generate",
+    "db:migrate": "bunx prisma migrate dev --name init",
+    "db:pull": "bunx prisma db pull",
+    "db:push": "bunx prisma db push",
+    "db:reset": "bunx prisma migrate reset",
+    "db:validate": "bunx prisma validate"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.0.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.0.8",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "prisma": "^6.0.0",
+    "zod": "^4.3.5"
+  }
+}
